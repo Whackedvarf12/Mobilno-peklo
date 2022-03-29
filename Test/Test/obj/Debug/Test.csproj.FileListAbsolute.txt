@@ -1,0 +1,7 @@
+D:\Mobilno-peklo\Test\Test\bin\Debug\Test.exe.config
+D:\Mobilno-peklo\Test\Test\bin\Debug\Test.exe
+D:\Mobilno-peklo\Test\Test\bin\Debug\Test.pdb
+D:\Mobilno-peklo\Test\Test\obj\Debug\Test.csproj.AssemblyReference.cache
+D:\Mobilno-peklo\Test\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+D:\Mobilno-peklo\Test\Test\obj\Debug\Test.exe
+D:\Mobilno-peklo\Test\Test\obj\Debug\Test.pdb
