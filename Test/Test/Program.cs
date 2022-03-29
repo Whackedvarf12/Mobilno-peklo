@@ -10,8 +10,14 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hey kids, want to git some hubs?");
-            Console.ReadLine();
+            BazaZaVajeEntities context = new BazaZaVajeEntities();
+            // vsi dobavitelji
+            var x1 = from a in context.DOBAVITELJ select a;
+            foreach(var y in x1)
+            {
+                Console.WriteLine(y.D_IME + " "+y.D_KONTAKT);
+            }
+            Console.Read();
         }
     }
 }

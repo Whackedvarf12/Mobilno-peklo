@@ -5,3 +5,8 @@ D:\Mobilno-peklo\Test\Test\obj\Debug\Test.csproj.AssemblyReference.cache
 D:\Mobilno-peklo\Test\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
 D:\Mobilno-peklo\Test\Test\obj\Debug\Test.exe
 D:\Mobilno-peklo\Test\Test\obj\Debug\Test.pdb
+D:\Mobilno-peklo\Test\Test\bin\Debug\EntityFramework.dll
+D:\Mobilno-peklo\Test\Test\bin\Debug\EntityFramework.SqlServer.dll
+D:\Mobilno-peklo\Test\Test\bin\Debug\EntityFramework.xml
+D:\Mobilno-peklo\Test\Test\bin\Debug\EntityFramework.SqlServer.xml
+D:\Mobilno-peklo\Test\Test\obj\Debug\Test.csproj.CopyComplete
