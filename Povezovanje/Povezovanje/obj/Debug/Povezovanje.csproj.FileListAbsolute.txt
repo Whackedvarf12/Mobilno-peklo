@@ -1,0 +1,15 @@
+D:\Mobilno-peklo\Povezovanje\Povezovanje\bin\Debug\Povezovanje.exe.config
+D:\Mobilno-peklo\Povezovanje\Povezovanje\bin\Debug\Povezovanje.exe
+D:\Mobilno-peklo\Povezovanje\Povezovanje\bin\Debug\Povezovanje.pdb
+D:\Mobilno-peklo\Povezovanje\Povezovanje\obj\Debug\Povezovanje.csproj.AssemblyReference.cache
+D:\Mobilno-peklo\Povezovanje\Povezovanje\obj\Debug\MainWindow.g.cs
+D:\Mobilno-peklo\Povezovanje\Povezovanje\obj\Debug\App.g.cs
+D:\Mobilno-peklo\Povezovanje\Povezovanje\obj\Debug\Povezovanje_MarkupCompile.cache
+D:\Mobilno-peklo\Povezovanje\Povezovanje\obj\Debug\Povezovanje_MarkupCompile.lref
+D:\Mobilno-peklo\Povezovanje\Povezovanje\obj\Debug\MainWindow.baml
+D:\Mobilno-peklo\Povezovanje\Povezovanje\obj\Debug\Povezovanje.g.resources
+D:\Mobilno-peklo\Povezovanje\Povezovanje\obj\Debug\Povezovanje.Properties.Resources.resources
+D:\Mobilno-peklo\Povezovanje\Povezovanje\obj\Debug\Povezovanje.csproj.GenerateResource.cache
+D:\Mobilno-peklo\Povezovanje\Povezovanje\obj\Debug\Povezovanje.csproj.CoreCompileInputs.cache
+D:\Mobilno-peklo\Povezovanje\Povezovanje\obj\Debug\Povezovanje.exe
+D:\Mobilno-peklo\Povezovanje\Povezovanje\obj\Debug\Povezovanje.pdb
