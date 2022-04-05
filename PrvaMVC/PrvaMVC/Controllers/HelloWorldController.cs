@@ -9,13 +9,15 @@ namespace PrvaMVC.Controllers
     public class HelloWorldController : Controller
     {
         // GET: HelloWorld
-        public string Index()
+        public ActionResult Index()
         {
-            return "Poz";
+            return View();
         }
-        public string Poz(string ime)
+        public ActionResult Poz(string ime, int st=3)
         {
-            return ime;
+            ViewBag.Message="Poz "+ime;
+            ViewBag.Num = st;
+            return View();
         }
     }
 }

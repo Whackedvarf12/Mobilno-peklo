@@ -77,3 +77,7 @@ D:\Mobilno-peklo\PrvaMVC\PrvaMVC\obj\Debug\PrvaMVC.csproj.CoreCompileInputs.cach
 D:\Mobilno-peklo\PrvaMVC\PrvaMVC\obj\Debug\PrvaMVC.csproj.CopyComplete
 D:\Mobilno-peklo\PrvaMVC\PrvaMVC\obj\Debug\PrvaMVC.dll
 D:\Mobilno-peklo\PrvaMVC\PrvaMVC\obj\Debug\PrvaMVC.pdb
+D:\Mobilno-peklo\PrvaMVC\PrvaMVC\bin\EntityFramework.dll
+D:\Mobilno-peklo\PrvaMVC\PrvaMVC\bin\EntityFramework.SqlServer.dll
+D:\Mobilno-peklo\PrvaMVC\PrvaMVC\bin\EntityFramework.xml
+D:\Mobilno-peklo\PrvaMVC\PrvaMVC\bin\EntityFramework.SqlServer.xml
