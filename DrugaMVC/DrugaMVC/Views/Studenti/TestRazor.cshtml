@@ -1,0 +1,23 @@
+﻿@model DrugaMVC.Models.Student
+@{
+    ViewBag.Title = "TestRazor";
+}
+<h1>TestRazor</h1>
+<h2>@DateTime.Now.ToLongDateString()</h2>
+@{
+    string date = DateTime.Now.ToShortDateString();
+    var sporocilo = "s";
+    @:danes je @date
+}
+<h3>@sporocilo</h3>
+@if (DateTime.IsLeapYear(DateTime.Now.Year))
+{
+
+
+    <text>Prestopno</text>
+}
+else
+{
+    <text>Ni Prestopno</text>
+}
+<li>StudentID: Model.StudentId </li>
