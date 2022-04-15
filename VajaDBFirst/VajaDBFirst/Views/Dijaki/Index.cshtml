@@ -1,0 +1,63 @@
+﻿@model IEnumerable<VajaDBFirst.Models.Dijak>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Ime
+        </th>
+        <th>
+            Priimek
+        </th>
+        <th>
+            Datum rojstva
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DijMati)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DijOče)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Razredniki.RazImePriimek)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DijIme)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DijPriimek)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DijDatumRojstva)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DijMati)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DijOče)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Razredniki.RazImePriimek)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DijID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DijID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DijID })
+        </td>
+    </tr>
+}
+
+</table>

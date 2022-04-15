@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Applications">
+      <EntityTypeMapping TypeName="Model.Applications">
+        <MappingFragment StoreEntitySet="Applications">
+          <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dijak">
+      <EntityTypeMapping TypeName="Model.Dijak">
+        <MappingFragment StoreEntitySet="Dijak">
+          <ScalarProperty Name="DijID" ColumnName="DijID" />
+          <ScalarProperty Name="DijIme" ColumnName="DijIme" />
+          <ScalarProperty Name="DijPriimek" ColumnName="DijPriimek" />
+          <ScalarProperty Name="DijRazred" ColumnName="DijRazred" />
+          <ScalarProperty Name="DijDatumRojstva" ColumnName="DijDatumRojstva" />
+          <ScalarProperty Name="DijaSlika" ColumnName="DijaSlika" />
+          <ScalarProperty Name="DijIDNadDatum" ColumnName="DijIDNadDatum" />
+          <ScalarProperty Name="DijIDNadUstanova" ColumnName="DijIDNadUstanova" />
+          <ScalarProperty Name="DijIDNadPotrditev" ColumnName="DijIDNadPotrditev" />
+          <ScalarProperty Name="DijMati" ColumnName="DijMati" />
+          <ScalarProperty Name="DijOče" ColumnName="DijOče" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DijakPodročje">
+      <EntityTypeMapping TypeName="Model.DijakPodročje">
+        <MappingFragment StoreEntitySet="DijakPodročje">
+          <ScalarProperty Name="DijID" ColumnName="DijID" />
+          <ScalarProperty Name="PodID" ColumnName="PodID" />
+          <ScalarProperty Name="DijPodTest" ColumnName="DijPodTest" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Izvedba">
+      <EntityTypeMapping TypeName="Model.Izvedba">
+        <MappingFragment StoreEntitySet="Izvedba">
+          <ScalarProperty Name="IzvID" ColumnName="IzvID" />
+          <ScalarProperty Name="IzvDatum" ColumnName="IzvDatum" />
+          <ScalarProperty Name="IzvMesec" ColumnName="IzvMesec" />
+          <ScalarProperty Name="IzvLeto" ColumnName="IzvLeto" />
+          <ScalarProperty Name="IzvOpis" ColumnName="IzvOpis" />
+          <ScalarProperty Name="IzvPodročje" ColumnName="IzvPodročje" />
+          <ScalarProperty Name="IzvUre" ColumnName="IzvUre" />
+          <ScalarProperty Name="IzvCilji" ColumnName="IzvCilji" />
+          <ScalarProperty Name="IzvUstanova" ColumnName="IzvUstanova" />
+          <ScalarProperty Name="IzvKraj" ColumnName="IzvKraj" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IzvedbaDijak">
+      <EntityTypeMapping TypeName="Model.IzvedbaDijak">
+        <MappingFragment StoreEntitySet="IzvedbaDijak">
+          <ScalarProperty Name="Izvedba" ColumnName="Izvedba" />
+          <ScalarProperty Name="Dijak" ColumnName="Dijak" />
+          <ScalarProperty Name="brezVeze" ColumnName="brezVeze" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IzvedbaMentor">
+      <EntityTypeMapping TypeName="Model.IzvedbaMentor">
+        <MappingFragment StoreEntitySet="IzvedbaMentor">
+          <ScalarProperty Name="Izvedba" ColumnName="Izvedba" />
+          <ScalarProperty Name="Mentor" ColumnName="Mentor" />
+          <ScalarProperty Name="brezveze" ColumnName="brezveze" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Memberships">
+      <EntityTypeMapping TypeName="Model.Memberships">
+        <MappingFragment StoreEntitySet="Memberships">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PasswordFormat" ColumnName="PasswordFormat" />
+          <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+          <ScalarProperty Name="PasswordAnswer" ColumnName="PasswordAnswer" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+          <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+          <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+          <ScalarProperty Name="FailedPasswordAttemptWindowStart" ColumnName="FailedPasswordAttemptWindowStart" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptCount" ColumnName="FailedPasswordAnswerAttemptCount" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptWindowsStart" ColumnName="FailedPasswordAnswerAttemptWindowsStart" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mentor">
+      <EntityTypeMapping TypeName="Model.Mentor">
+        <MappingFragment StoreEntitySet="Mentor">
+          <ScalarProperty Name="MenId" ColumnName="MenId" />
+          <ScalarProperty Name="MenIme" ColumnName="MenIme" />
+          <ScalarProperty Name="MenPriimek" ColumnName="MenPriimek" />
+          <ScalarProperty Name="MenSlika" ColumnName="MenSlika" />
+          <ScalarProperty Name="MenVloga" ColumnName="MenVloga" />
+          <ScalarProperty Name="MenNaziv" ColumnName="MenNaziv" />
+          <ScalarProperty Name="MenUstanova" ColumnName="MenUstanova" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanDejavnosti">
+      <EntityTypeMapping TypeName="Model.PlanDejavnosti">
+        <MappingFragment StoreEntitySet="PlanDejavnosti">
+          <ScalarProperty Name="PlaId" ColumnName="PlaId" />
+          <ScalarProperty Name="PlaOpis" ColumnName="PlaOpis" />
+          <ScalarProperty Name="PlaŠtDijakov" ColumnName="PlaŠtDijakov" />
+          <ScalarProperty Name="PlaCilji" ColumnName="PlaCilji" />
+          <ScalarProperty Name="PlaTrajanje" ColumnName="PlaTrajanje" />
+          <ScalarProperty Name="PlaPodročje" ColumnName="PlaPodročje" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanDijak">
+      <EntityTypeMapping TypeName="Model.PlanDijak">
+        <MappingFragment StoreEntitySet="PlanDijak">
+          <ScalarProperty Name="PlaID" ColumnName="PlaID" />
+          <ScalarProperty Name="DijID" ColumnName="DijID" />
+          <ScalarProperty Name="BrezVeze" ColumnName="BrezVeze" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanSodelavci">
+      <EntityTypeMapping TypeName="Model.PlanSodelavci">
+        <MappingFragment StoreEntitySet="PlanSodelavci">
+          <ScalarProperty Name="PlaID" ColumnName="PlaID" />
+          <ScalarProperty Name="MenID" ColumnName="MenID" />
+          <ScalarProperty Name="brezveze" ColumnName="brezveze" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Področja">
+      <EntityTypeMapping TypeName="Model.Področja">
+        <MappingFragment StoreEntitySet="Področja">
+          <ScalarProperty Name="PodID" ColumnName="PodID" />
+          <ScalarProperty Name="PodIme" ColumnName="PodIme" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profiles">
+      <EntityTypeMapping TypeName="Model.Profiles">
+        <MappingFragment StoreEntitySet="Profiles">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="PropertyNames" ColumnName="PropertyNames" />
+          <ScalarProperty Name="PropertyValueStrings" ColumnName="PropertyValueStrings" />
+          <ScalarProperty Name="PropertyValueBinary" ColumnName="PropertyValueBinary" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Razredniki">
+      <EntityTypeMapping TypeName="Model.Razredniki">
+        <MappingFragment StoreEntitySet="Razredniki">
+          <ScalarProperty Name="RazRazred" ColumnName="RazRazred" />
+          <ScalarProperty Name="RazImePriimek" ColumnName="RazImePriimek" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="Model.Roles">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Slike">
+      <EntityTypeMapping TypeName="Model.Slike">
+        <MappingFragment StoreEntitySet="Slike">
+          <ScalarProperty Name="IDSlika" ColumnName="IDSlika" />
+          <ScalarProperty Name="IzvedbaID" ColumnName="IzvedbaID" />
+          <ScalarProperty Name="SlikaSl" ColumnName="SlikaSl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="Model.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DijakPoPodročjih">
+      <EntityTypeMapping TypeName="Model.DijakPoPodročjih">
+        <MappingFragment StoreEntitySet="DijakPoPodročjih">
+          <ScalarProperty Name="DijID" ColumnName="DijID" />
+          <ScalarProperty Name="DijIme" ColumnName="DijIme" />
+          <ScalarProperty Name="DijPriimek" ColumnName="DijPriimek" />
+          <ScalarProperty Name="DijRazred" ColumnName="DijRazred" />
+          <ScalarProperty Name="DijDatumRojstva" ColumnName="DijDatumRojstva" />
+          <ScalarProperty Name="DijaSlika" ColumnName="DijaSlika" />
+          <ScalarProperty Name="DijIDNadDatum" ColumnName="DijIDNadDatum" />
+          <ScalarProperty Name="DijIDNadUstanova" ColumnName="DijIDNadUstanova" />
+          <ScalarProperty Name="DijIDNadPotrditev" ColumnName="DijIDNadPotrditev" />
+          <ScalarProperty Name="DijMati" ColumnName="DijMati" />
+          <ScalarProperty Name="DijOče" ColumnName="DijOče" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="PodID" ColumnName="PodID" />
+          <ScalarProperty Name="PodIme" ColumnName="PodIme" />
+          <ScalarProperty Name="DijPodTest" ColumnName="DijPodTest" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IzvdebaPoDijakih">
+      <EntityTypeMapping TypeName="Model.IzvdebaPoDijakih">
+        <MappingFragment StoreEntitySet="IzvdebaPoDijakih">
+          <ScalarProperty Name="IzvID" ColumnName="IzvID" />
+          <ScalarProperty Name="IzvDatum" ColumnName="IzvDatum" />
+          <ScalarProperty Name="IzvMesec" ColumnName="IzvMesec" />
+          <ScalarProperty Name="IzvLeto" ColumnName="IzvLeto" />
+          <ScalarProperty Name="IzvOpis" ColumnName="IzvOpis" />
+          <ScalarProperty Name="IzvCilji" ColumnName="IzvCilji" />
+          <ScalarProperty Name="DijID" ColumnName="DijID" />
+          <ScalarProperty Name="DijIme" ColumnName="DijIme" />
+          <ScalarProperty Name="DijPriimek" ColumnName="DijPriimek" />
+          <ScalarProperty Name="DijRazred" ColumnName="DijRazred" />
+          <ScalarProperty Name="PodIme" ColumnName="PodIme" />
+          <ScalarProperty Name="IzvUre" ColumnName="IzvUre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IzvedbaPoMentorjih">
+      <EntityTypeMapping TypeName="Model.IzvedbaPoMentorjih">
+        <MappingFragment StoreEntitySet="IzvedbaPoMentorjih">
+          <ScalarProperty Name="IzvID" ColumnName="IzvID" />
+          <ScalarProperty Name="IzvDatum" ColumnName="IzvDatum" />
+          <ScalarProperty Name="IzvMesec" ColumnName="IzvMesec" />
+          <ScalarProperty Name="IzvLeto" ColumnName="IzvLeto" />
+          <ScalarProperty Name="IzvOpis" ColumnName="IzvOpis" />
+          <ScalarProperty Name="MenId" ColumnName="MenId" />
+          <ScalarProperty Name="MenIme" ColumnName="MenIme" />
+          <ScalarProperty Name="MenPriimek" ColumnName="MenPriimek" />
+          <ScalarProperty Name="MenSlika" ColumnName="MenSlika" />
+          <ScalarProperty Name="MenVloga" ColumnName="MenVloga" />
+          <ScalarProperty Name="MenNaziv" ColumnName="MenNaziv" />
+          <ScalarProperty Name="MenUstanova" ColumnName="MenUstanova" />
+          <ScalarProperty Name="IzvUre" ColumnName="IzvUre" />
+          <ScalarProperty Name="PodIme" ColumnName="PodIme" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanPoDijakih">
+      <EntityTypeMapping TypeName="Model.PlanPoDijakih">
+        <MappingFragment StoreEntitySet="PlanPoDijakih">
+          <ScalarProperty Name="PlaId" ColumnName="PlaId" />
+          <ScalarProperty Name="PlaCilji" ColumnName="PlaCilji" />
+          <ScalarProperty Name="PlaOpis" ColumnName="PlaOpis" />
+          <ScalarProperty Name="PlaPodročje" ColumnName="PlaPodročje" />
+          <ScalarProperty Name="PlaŠtDijakov" ColumnName="PlaŠtDijakov" />
+          <ScalarProperty Name="PlaTrajanje" ColumnName="PlaTrajanje" />
+          <ScalarProperty Name="DijID" ColumnName="DijID" />
+          <ScalarProperty Name="DijIme" ColumnName="DijIme" />
+          <ScalarProperty Name="DijPriimek" ColumnName="DijPriimek" />
+          <ScalarProperty Name="DijRazred" ColumnName="DijRazred" />
+          <ScalarProperty Name="PodIme" ColumnName="PodIme" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanPoMentorjih">
+      <EntityTypeMapping TypeName="Model.PlanPoMentorjih">
+        <MappingFragment StoreEntitySet="PlanPoMentorjih">
+          <ScalarProperty Name="PlaId" ColumnName="PlaId" />
+          <ScalarProperty Name="PlaOpis" ColumnName="PlaOpis" />
+          <ScalarProperty Name="PlaŠtDijakov" ColumnName="PlaŠtDijakov" />
+          <ScalarProperty Name="PlaCilji" ColumnName="PlaCilji" />
+          <ScalarProperty Name="PlaTrajanje" ColumnName="PlaTrajanje" />
+          <ScalarProperty Name="MenId" ColumnName="MenId" />
+          <ScalarProperty Name="MenIme" ColumnName="MenIme" />
+          <ScalarProperty Name="MenPriimek" ColumnName="MenPriimek" />
+          <ScalarProperty Name="MenSlika" ColumnName="MenSlika" />
+          <ScalarProperty Name="MenVloga" ColumnName="MenVloga" />
+          <ScalarProperty Name="MenNaziv" ColumnName="MenNaziv" />
+          <ScalarProperty Name="MenUstanova" ColumnName="MenUstanova" />
+          <ScalarProperty Name="PodIme" ColumnName="PodIme" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="UsersInRoles" TypeName="Model.UsersInRoles" StoreEntitySet="UsersInRoles">
+      <EndProperty Name="Roles">
+        <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="Users">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
