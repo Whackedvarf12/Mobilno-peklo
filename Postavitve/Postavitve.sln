@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Postavitve", "Postavitve\Postavitve.csproj", "{F16CE806-DD58-4501-8226-643C838053B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F16CE806-DD58-4501-8226-643C838053B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F16CE806-DD58-4501-8226-643C838053B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F16CE806-DD58-4501-8226-643C838053B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F16CE806-DD58-4501-8226-643C838053B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D214415-13B5-4776-87B1-C66D6427F401}
+	EndGlobalSection
+EndGlobal
