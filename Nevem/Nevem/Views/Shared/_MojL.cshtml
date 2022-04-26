@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div id="header">
+        @RenderSection("header")
+    </div>
+    <div id="list">
+           @RenderSection("list")
+    </div>
+    <div id="footer">
+        bla bla bla
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

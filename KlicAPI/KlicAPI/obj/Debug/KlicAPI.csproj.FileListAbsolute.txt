@@ -1,0 +1,12 @@
+D:\Mobilno-peklo\KlicAPI\KlicAPI\bin\Debug\KlicAPI.exe.config
+D:\Mobilno-peklo\KlicAPI\KlicAPI\bin\Debug\KlicAPI.exe
+D:\Mobilno-peklo\KlicAPI\KlicAPI\bin\Debug\KlicAPI.pdb
+D:\Mobilno-peklo\KlicAPI\KlicAPI\bin\Debug\Newtonsoft.Json.dll
+D:\Mobilno-peklo\KlicAPI\KlicAPI\bin\Debug\System.Net.Http.Formatting.dll
+D:\Mobilno-peklo\KlicAPI\KlicAPI\bin\Debug\Newtonsoft.Json.xml
+D:\Mobilno-peklo\KlicAPI\KlicAPI\bin\Debug\System.Net.Http.Formatting.xml
+D:\Mobilno-peklo\KlicAPI\KlicAPI\obj\Debug\KlicAPI.csproj.AssemblyReference.cache
+D:\Mobilno-peklo\KlicAPI\KlicAPI\obj\Debug\KlicAPI.csproj.CoreCompileInputs.cache
+D:\Mobilno-peklo\KlicAPI\KlicAPI\obj\Debug\KlicAPI.csproj.CopyComplete
+D:\Mobilno-peklo\KlicAPI\KlicAPI\obj\Debug\KlicAPI.exe
+D:\Mobilno-peklo\KlicAPI\KlicAPI\obj\Debug\KlicAPI.pdb
