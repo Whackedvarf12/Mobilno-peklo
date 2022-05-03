@@ -1,0 +1,12 @@
+D:\Mobilno-peklo\Vaja2Console\Vaja2Console\obj\Debug\Vaja2Console.csproj.AssemblyReference.cache
+D:\Mobilno-peklo\Vaja2Console\Vaja2Console\obj\Debug\Vaja2Console.csproj.CoreCompileInputs.cache
+D:\Mobilno-peklo\Vaja2Console\Vaja2Console\bin\Debug\Vaja2Console.exe.config
+D:\Mobilno-peklo\Vaja2Console\Vaja2Console\bin\Debug\Vaja2Console.exe
+D:\Mobilno-peklo\Vaja2Console\Vaja2Console\bin\Debug\Vaja2Console.pdb
+D:\Mobilno-peklo\Vaja2Console\Vaja2Console\bin\Debug\Newtonsoft.Json.dll
+D:\Mobilno-peklo\Vaja2Console\Vaja2Console\bin\Debug\System.Net.Http.Formatting.dll
+D:\Mobilno-peklo\Vaja2Console\Vaja2Console\bin\Debug\Newtonsoft.Json.xml
+D:\Mobilno-peklo\Vaja2Console\Vaja2Console\bin\Debug\System.Net.Http.Formatting.xml
+D:\Mobilno-peklo\Vaja2Console\Vaja2Console\obj\Debug\Vaja2Console.csproj.CopyComplete
+D:\Mobilno-peklo\Vaja2Console\Vaja2Console\obj\Debug\Vaja2Console.exe
+D:\Mobilno-peklo\Vaja2Console\Vaja2Console\obj\Debug\Vaja2Console.pdb
