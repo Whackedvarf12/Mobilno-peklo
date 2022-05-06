@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Dijak">
+    <Key>
+      <PropertyRef Name="DijID" />
+    </Key>
+    <Property Name="DijID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DijIme" Type="nvarchar" MaxLength="50" />
+    <Property Name="DijPriimek" Type="nvarchar" MaxLength="50" />
+    <Property Name="DijRazred" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="DijDatumRojstva" Type="date" />
+    <Property Name="DijaSlika" Type="image" />
+    <Property Name="DijIDNadDatum" Type="date" />
+    <Property Name="DijIDNadUstanova" Type="nvarchar" MaxLength="50" />
+    <Property Name="DijIDNadPotrditev" Type="date" />
+    <Property Name="DijMati" Type="nvarchar" MaxLength="50" />
+    <Property Name="DijOče" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="DijakPodročje">
+    <Key>
+      <PropertyRef Name="DijID" />
+      <PropertyRef Name="PodID" />
+    </Key>
+    <Property Name="DijID" Type="int" Nullable="false" />
+    <Property Name="PodID" Type="int" Nullable="false" />
+    <Property Name="DijPodTest" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Področja">
+    <Key>
+      <PropertyRef Name="PodID" />
+    </Key>
+    <Property Name="PodID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PodIme" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Razredniki">
+    <Key>
+      <PropertyRef Name="RazRazred" />
+    </Key>
+    <Property Name="RazRazred" Nullable="false" MaxLength="10" Type="nchar" />
+    <Property Name="RazImePriimek" Nullable="false" MaxLength="50" Type="nvarchar" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'D:\BAZE\ARP\ASPNET-EVIDENCA2012.WEB-20130606175820.MDF.dbo.DijakPoPodročjih' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'D:\BAZE\ARP\ASPNET-EVIDENCA2012.WEB-20130606175820.MDF.dbo.IzvdebaPoDijakih' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'D:\BAZE\ARP\ASPNET-EVIDENCA2012.WEB-20130606175820.MDF.dbo.IzvedbaPoMentorjih' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'D:\BAZE\ARP\ASPNET-EVIDENCA2012.WEB-20130606175820.MDF.dbo.PlanPoDijakih' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'D:\BAZE\ARP\ASPNET-EVIDENCA2012.WEB-20130606175820.MDF.dbo.PlanPoMentorjih' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <Association Name="FK_Dijak_Razrednik">
+    <End Type="Self.Razredniki" Multiplicity="1" Role="Razredniki" />
+    <End Type="Self.Dijak" Multiplicity="*" Role="Dijak" />
+    <ReferentialConstraint>
+      <Principal Role="Razredniki">
+        <PropertyRef Name="RazRazred" />
+      </Principal>
+      <Dependent Role="Dijak">
+        <PropertyRef Name="DijRazred" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DijakPodročje_Dijak">
+    <End Role="Dijak" Type="Self.Dijak" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DijakPodročje" Type="Self.DijakPodročje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dijak">
+        <PropertyRef Name="DijID" />
+      </Principal>
+      <Dependent Role="DijakPodročje">
+        <PropertyRef Name="DijID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DijakPodročje_Področja">
+    <End Role="Področja" Type="Self.Področja" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DijakPodročje" Type="Self.DijakPodročje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Področja">
+        <PropertyRef Name="PodID" />
+      </Principal>
+      <Dependent Role="DijakPodročje">
+        <PropertyRef Name="PodID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="Dijak" EntityType="Self.Dijak" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DijakPodročje" EntityType="Self.DijakPodročje" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Področja" EntityType="Self.Področja" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Razredniki" EntityType="Self.Razredniki" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Dijak_Razrednik" Association="Self.FK_Dijak_Razrednik">
+      <End EntitySet="Razredniki" Role="Razredniki" />
+      <End EntitySet="Dijak" Role="Dijak" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DijakPodročje_Dijak" Association="Self.FK_DijakPodročje_Dijak">
+      <End Role="Dijak" EntitySet="Dijak" />
+      <End Role="DijakPodročje" EntitySet="DijakPodročje" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DijakPodročje_Področja" Association="Self.FK_DijakPodročje_Področja">
+      <End Role="Področja" EntitySet="Področja" />
+      <End Role="DijakPodročje" EntitySet="DijakPodročje" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Dijak">
+      <EntityTypeMapping TypeName="Model.Dijak">
+        <MappingFragment StoreEntitySet="Dijak">
+          <ScalarProperty Name="DijID" ColumnName="DijID" />
+          <ScalarProperty Name="DijIme" ColumnName="DijIme" />
+          <ScalarProperty Name="DijPriimek" ColumnName="DijPriimek" />
+          <ScalarProperty Name="DijRazred" ColumnName="DijRazred" />
+          <ScalarProperty Name="DijDatumRojstva" ColumnName="DijDatumRojstva" />
+          <ScalarProperty Name="DijaSlika" ColumnName="DijaSlika" />
+          <ScalarProperty Name="DijIDNadDatum" ColumnName="DijIDNadDatum" />
+          <ScalarProperty Name="DijIDNadUstanova" ColumnName="DijIDNadUstanova" />
+          <ScalarProperty Name="DijIDNadPotrditev" ColumnName="DijIDNadPotrditev" />
+          <ScalarProperty Name="DijMati" ColumnName="DijMati" />
+          <ScalarProperty Name="DijOče" ColumnName="DijOče" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DijakPodročje">
+      <EntityTypeMapping TypeName="Model.DijakPodročje">
+        <MappingFragment StoreEntitySet="DijakPodročje">
+          <ScalarProperty Name="DijID" ColumnName="DijID" />
+          <ScalarProperty Name="PodID" ColumnName="PodID" />
+          <ScalarProperty Name="DijPodTest" ColumnName="DijPodTest" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Področja">
+      <EntityTypeMapping TypeName="Model.Področja">
+        <MappingFragment StoreEntitySet="Področja">
+          <ScalarProperty Name="PodID" ColumnName="PodID" />
+          <ScalarProperty Name="PodIme" ColumnName="PodIme" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Razredniki">
+      <EntityTypeMapping TypeName="Model.Razredniki">
+        <MappingFragment StoreEntitySet="Razredniki">
+          <ScalarProperty Name="RazRazred" ColumnName="RazRazred" />
+          <ScalarProperty Name="RazImePriimek" ColumnName="RazImePriimek" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
