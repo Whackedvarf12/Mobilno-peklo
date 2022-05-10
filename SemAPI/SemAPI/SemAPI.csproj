@@ -163,8 +163,10 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\DijakMVCController.cs" />
+    <Compile Include="Controllers\DijakPodročjeMVCController.cs" />
     <Compile Include="Controllers\DijaksController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PodročjaMVCController.cs" />
     <Compile Include="Controllers\RazrednikisController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -276,6 +278,21 @@
     <Content Include="Views\DijakMVC\Details.cshtml" />
     <Content Include="Views\DijakMVC\Edit.cshtml" />
     <Content Include="Views\DijakMVC\Index.cshtml" />
+    <Content Include="Views\Področja\Create.cshtml" />
+    <Content Include="Views\Področja\Delete.cshtml" />
+    <Content Include="Views\Področja\Details.cshtml" />
+    <Content Include="Views\Področja\Edit.cshtml" />
+    <Content Include="Views\Področja\Index.cshtml" />
+    <Content Include="Views\PodročjaMVC\Create.cshtml" />
+    <Content Include="Views\PodročjaMVC\Delete.cshtml" />
+    <Content Include="Views\PodročjaMVC\Details.cshtml" />
+    <Content Include="Views\PodročjaMVC\Edit.cshtml" />
+    <Content Include="Views\PodročjaMVC\Index.cshtml" />
+    <Content Include="Views\DijakPodročjeMVC\Create.cshtml" />
+    <Content Include="Views\DijakPodročjeMVC\Delete.cshtml" />
+    <Content Include="Views\DijakPodročjeMVC\Details.cshtml" />
+    <Content Include="Views\DijakPodročjeMVC\Edit.cshtml" />
+    <Content Include="Views\DijakPodročjeMVC\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

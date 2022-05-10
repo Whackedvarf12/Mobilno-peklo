@@ -22,6 +22,7 @@
     <EntitySetMapping Name="DijakPodročje">
       <EntityTypeMapping TypeName="Model.DijakPodročje">
         <MappingFragment StoreEntitySet="DijakPodročje">
+          <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="DijID" ColumnName="DijID" />
           <ScalarProperty Name="PodID" ColumnName="PodID" />
           <ScalarProperty Name="DijPodTest" ColumnName="DijPodTest" />

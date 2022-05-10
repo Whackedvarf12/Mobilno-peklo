@@ -17,6 +17,7 @@ namespace SemAPI.Models
         public int DijID { get; set; }
         public int PodID { get; set; }
         public string DijPodTest { get; set; }
+        public int Id { get; set; }
     
         public virtual Dijak Dijak { get; set; }
         public virtual Področja Področja { get; set; }

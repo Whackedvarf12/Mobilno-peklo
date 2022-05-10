@@ -19,12 +19,12 @@
   </EntityType>
   <EntityType Name="DijakPodročje">
     <Key>
-      <PropertyRef Name="DijID" />
-      <PropertyRef Name="PodID" />
+      <PropertyRef Name="Id" />
     </Key>
     <Property Name="DijID" Type="int" Nullable="false" />
     <Property Name="PodID" Type="int" Nullable="false" />
     <Property Name="DijPodTest" Type="nvarchar(max)" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
   </EntityType>
   <EntityType Name="Področja">
     <Key>
@@ -37,22 +37,12 @@
     <Key>
       <PropertyRef Name="RazRazred" />
     </Key>
-    <Property Name="RazRazred" Nullable="false" MaxLength="10" Type="nchar" />
-    <Property Name="RazImePriimek" Nullable="false" MaxLength="50" Type="nvarchar" />
+    <Property Name="RazRazred" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="RazImePriimek" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'D:\BAZE\ARP\ASPNET-EVIDENCA2012.WEB-20130606175820.MDF.dbo.DijakPoPodročjih' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'D:\BAZE\ARP\ASPNET-EVIDENCA2012.WEB-20130606175820.MDF.dbo.IzvdebaPoDijakih' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'D:\BAZE\ARP\ASPNET-EVIDENCA2012.WEB-20130606175820.MDF.dbo.IzvedbaPoMentorjih' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'D:\BAZE\ARP\ASPNET-EVIDENCA2012.WEB-20130606175820.MDF.dbo.PlanPoDijakih' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'D:\BAZE\ARP\ASPNET-EVIDENCA2012.WEB-20130606175820.MDF.dbo.PlanPoMentorjih' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <Association Name="FK_Dijak_Razrednik">
-    <End Type="Self.Razredniki" Multiplicity="1" Role="Razredniki" />
-    <End Type="Self.Dijak" Multiplicity="*" Role="Dijak" />
+    <End Role="Razredniki" Type="Self.Razredniki" Multiplicity="1" />
+    <End Role="Dijak" Type="Self.Dijak" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Razredniki">
         <PropertyRef Name="RazRazred" />
@@ -96,8 +86,8 @@ warning 6002: The table/view 'D:\BAZE\ARP\ASPNET-EVIDENCA2012.WEB-20130606175820
     <EntitySet Name="Področja" EntityType="Self.Področja" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Razredniki" EntityType="Self.Razredniki" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Dijak_Razrednik" Association="Self.FK_Dijak_Razrednik">
-      <End EntitySet="Razredniki" Role="Razredniki" />
-      <End EntitySet="Dijak" Role="Dijak" />
+      <End Role="Razredniki" EntitySet="Razredniki" />
+      <End Role="Dijak" EntitySet="Dijak" />
     </AssociationSet>
     <AssociationSet Name="FK_DijakPodročje_Dijak" Association="Self.FK_DijakPodročje_Dijak">
       <End Role="Dijak" EntitySet="Dijak" />

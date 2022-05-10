@@ -21,14 +21,14 @@
   </EntityType>
   <EntityType Name="DijakPodročje">
     <Key>
-      <PropertyRef Name="DijID" />
-      <PropertyRef Name="PodID" />
+      <PropertyRef Name="Id" />
     </Key>
     <Property Name="DijID" Type="Int32" Nullable="false" />
     <Property Name="PodID" Type="Int32" Nullable="false" />
     <Property Name="DijPodTest" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Dijak" Relationship="Self.FK_DijakPodročje_Dijak" FromRole="DijakPodročje" ToRole="Dijak" />
     <NavigationProperty Name="Področja" Relationship="Self.FK_DijakPodročje_Področja" FromRole="DijakPodročje" ToRole="Področja" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
   </EntityType>
   <EntityType Name="Področja">
     <Key>

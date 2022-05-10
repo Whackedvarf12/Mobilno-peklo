@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Dijak">
           <Key>
             <PropertyRef Name="DijID" />
@@ -24,12 +24,12 @@
         </EntityType>
         <EntityType Name="DijakPodročje">
           <Key>
-            <PropertyRef Name="DijID" />
-            <PropertyRef Name="PodID" />
+            <PropertyRef Name="Id" />
           </Key>
           <Property Name="DijID" Type="int" Nullable="false" />
           <Property Name="PodID" Type="int" Nullable="false" />
           <Property Name="DijPodTest" Type="nvarchar(max)" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
         <EntityType Name="Področja">
           <Key>
@@ -42,22 +42,12 @@
           <Key>
             <PropertyRef Name="RazRazred" />
           </Key>
-          <Property Name="RazRazred" Nullable="false" MaxLength="10" Type="nchar" />
-          <Property Name="RazImePriimek" Nullable="false" MaxLength="50" Type="nvarchar" />
+          <Property Name="RazRazred" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="RazImePriimek" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'D:\BAZE\ARP\ASPNET-EVIDENCA2012.WEB-20130606175820.MDF.dbo.DijakPoPodročjih' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'D:\BAZE\ARP\ASPNET-EVIDENCA2012.WEB-20130606175820.MDF.dbo.IzvdebaPoDijakih' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'D:\BAZE\ARP\ASPNET-EVIDENCA2012.WEB-20130606175820.MDF.dbo.IzvedbaPoMentorjih' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'D:\BAZE\ARP\ASPNET-EVIDENCA2012.WEB-20130606175820.MDF.dbo.PlanPoDijakih' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'D:\BAZE\ARP\ASPNET-EVIDENCA2012.WEB-20130606175820.MDF.dbo.PlanPoMentorjih' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <Association Name="FK_Dijak_Razrednik">
-          <End Type="Self.Razredniki" Multiplicity="1" Role="Razredniki" />
-          <End Type="Self.Dijak" Multiplicity="*" Role="Dijak" />
+          <End Role="Razredniki" Type="Self.Razredniki" Multiplicity="1" />
+          <End Role="Dijak" Type="Self.Dijak" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Razredniki">
               <PropertyRef Name="RazRazred" />
@@ -101,8 +91,8 @@ warning 6002: The table/view 'D:\BAZE\ARP\ASPNET-EVIDENCA2012.WEB-20130606175820
           <EntitySet Name="Področja" EntityType="Self.Področja" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Razredniki" EntityType="Self.Razredniki" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Dijak_Razrednik" Association="Self.FK_Dijak_Razrednik">
-            <End EntitySet="Razredniki" Role="Razredniki" />
-            <End EntitySet="Dijak" Role="Dijak" />
+            <End Role="Razredniki" EntitySet="Razredniki" />
+            <End Role="Dijak" EntitySet="Dijak" />
           </AssociationSet>
           <AssociationSet Name="FK_DijakPodročje_Dijak" Association="Self.FK_DijakPodročje_Dijak">
             <End Role="Dijak" EntitySet="Dijak" />
@@ -112,9 +102,8 @@ warning 6002: The table/view 'D:\BAZE\ARP\ASPNET-EVIDENCA2012.WEB-20130606175820
             <End Role="Področja" EntitySet="Področja" />
             <End Role="DijakPodročje" EntitySet="DijakPodročje" />
           </AssociationSet>
-          </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -139,14 +128,14 @@ warning 6002: The table/view 'D:\BAZE\ARP\ASPNET-EVIDENCA2012.WEB-20130606175820
           </EntityType>
         <EntityType Name="DijakPodročje">
           <Key>
-            <PropertyRef Name="DijID" />
-            <PropertyRef Name="PodID" />
+            <PropertyRef Name="Id" />
           </Key>
           <Property Name="DijID" Type="Int32" Nullable="false" />
           <Property Name="PodID" Type="Int32" Nullable="false" />
           <Property Name="DijPodTest" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Dijak" Relationship="Self.FK_DijakPodročje_Dijak" FromRole="DijakPodročje" ToRole="Dijak" />
           <NavigationProperty Name="Področja" Relationship="Self.FK_DijakPodročje_Področja" FromRole="DijakPodročje" ToRole="Področja" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="Področja">
           <Key>
@@ -249,6 +238,7 @@ warning 6002: The table/view 'D:\BAZE\ARP\ASPNET-EVIDENCA2012.WEB-20130606175820
           <EntitySetMapping Name="DijakPodročje">
             <EntityTypeMapping TypeName="Model.DijakPodročje">
               <MappingFragment StoreEntitySet="DijakPodročje">
+                <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="DijID" ColumnName="DijID" />
                 <ScalarProperty Name="PodID" ColumnName="PodID" />
                 <ScalarProperty Name="DijPodTest" ColumnName="DijPodTest" />

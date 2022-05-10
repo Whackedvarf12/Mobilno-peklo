@@ -1,0 +1,26 @@
+﻿@model SemAPI.Models.Področja
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Področja</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PodIme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PodIme)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PodID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

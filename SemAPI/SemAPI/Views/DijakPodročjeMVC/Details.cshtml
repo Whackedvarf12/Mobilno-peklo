@@ -1,0 +1,42 @@
+﻿@model SemAPI.Models.DijakPodročje
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DijakPodročje</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DijPodTest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DijPodTest)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dijak.DijIme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dijak.DijIme)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Področja.PodIme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Področja.PodIme)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
