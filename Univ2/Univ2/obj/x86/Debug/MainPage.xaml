@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="Univ2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Univ2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <!--<StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock FontSize="100">Lorem Ipsum</TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"  Height="850">
+            <StackPanel Orientation="Vertical" Width="480" >
+                <TextBlock FontSize="25" Height="auto" TextWrapping="Wrap"><Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id odio tellus. Proin vitae sodales enim. Fusce vestibulum magna at dictum rutrum. Nulla scelerisque lacinia neque vitae gravida. Cras non venenatis neque. Suspendisse porttitor posuere ex non euismod. Integer sed massa metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer molestie risus rhoncus commodo sollicitudin. Sed pretium tincidunt massa, quis aliquet orci tempus in. Aliquam viverra faucibus eros, eleifend tempor quam tincidunt quis. Nam tincidunt nulla at sem accumsan blandit. Vivamus nec tincidunt turpis. Duis malesuada, purus et efficitur scelerisque, dui enim fringilla leo, in interdum ex dui vel velit. Proin at interdum nibh. Morbi in urna eget justo mattis pulvinar et eu mauris. Vivamus turpis risus, eleifend nec efficitur in, hendrerit sit amet ipsum. Integer tristique dui vel eros pretium placerat. Suspendisse eget purus nunc. Donec efficitur, nisi sit amet fringilla pretium, sem ex dictum lacus, nec fermentum ipsum leo at mauris. Ut vel massa a lectus ultrices venenatis at at nisl. Phasellus at ipsum auctor, tempus metus eget, laoreet nisl. Aliquam ultrices sed mauris at ullamcorper. Sed blandit at sem eget pellentesque. Cras ac ligula ac enim lacinia convallis id eget ante. Vestibulum pretium tellus at tellus finibus, eget auctor diam egestas."/></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Width="600">
+                <TextBlock FontSize="25" Height="auto" TextWrapping="Wrap"><Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id odio tellus. Proin vitae sodales enim. Fusce vestibulum magna at dictum rutrum. Nulla scelerisque lacinia neque vitae gravida. Cras non venenatis neque. Suspendisse porttitor posuere ex non euismod. Integer sed massa metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer molestie risus rhoncus commodo sollicitudin. Sed pretium tincidunt massa, quis aliquet orci tempus in. Aliquam viverra faucibus eros, eleifend tempor quam tincidunt quis. Nam tincidunt nulla at sem accumsan blandit. Vivamus nec tincidunt turpis. Duis malesuada, purus et efficitur scelerisque, dui enim fringilla leo, in interdum ex dui vel velit. Proin at interdum nibh. Morbi in urna eget justo mattis pulvinar et eu mauris. Vivamus turpis risus, eleifend nec efficitur in, hendrerit sit amet ipsum. Integer tristique dui vel eros pretium placerat. Suspendisse eget purus nunc. Donec efficitur, nisi sit amet fringilla pretium, sem ex dictum lacus, nec fermentum ipsum leo at mauris. Ut vel massa a lectus ultrices venenatis at at nisl. Phasellus at ipsum auctor, tempus metus eget, laoreet nisl. Aliquam ultrices sed mauris at ullamcorper. Sed blandit at sem eget pellentesque. Cras ac ligula ac enim lacinia convallis id eget ante. Vestibulum pretium tellus at tellus finibus, eget auctor diam egestas."/></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <Rectangle Width="200" Height="200" Fill="blue"></Rectangle>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <Rectangle Width="200" Height="100" Fill="red"></Rectangle>
+                <Rectangle Width="200" Height="100" Fill="yellow"></Rectangle>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>-->
+    <StackPanel Orientation="Horizontal">
+        <SplitView x:ConnectionId='2' Name="MySplitView" CompactPaneLength="10" OpenPaneLength="50"
+DisplayMode="CompactInline">
+            <SplitView.Pane>
+                <StackPanel>
+                    <TextBlock Text="First" />
+                    <TextBlock Text="Second" />
+                    <TextBlock Text="Third" />
+                </StackPanel>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <StackPanel>
+                    <TextBlock Text="Fourth" />
+                    <TextBlock Text="Fifth" />
+                    <TextBlock Text="Sixth" />
+                </StackPanel>
+            </SplitView.Content>
+        </SplitView>
+        <Button x:ConnectionId='3' Content="Click Me"                      />
+    </StackPanel>
+</Page>
+
