@@ -46,3 +46,13 @@ D:\Mobilno-peklo\stili\stili\obj\x86\Debug\qualifiers.txt.intermediate
 D:\Mobilno-peklo\stili\stili\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 D:\Mobilno-peklo\stili\stili\obj\x86\Debug\ProjectArchitectures.txt
 D:\Mobilno-peklo\stili\stili\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424743200000000.json
+D:\Mobilno-peklo\stili\stili\bin\x86\Debug\Donut.xbf
+D:\Mobilno-peklo\stili\stili\obj\x86\Debug\Donut.g.i.cs
+D:\Mobilno-peklo\stili\stili\obj\x86\Debug\Donut.g.cs
+D:\Mobilno-peklo\stili\stili\obj\x86\Debug\Donut.xaml
+D:\Mobilno-peklo\stili\stili\obj\x86\Debug\Donut.xbf
+D:\Mobilno-peklo\stili\stili\bin\x86\Debug\Coffe.xbf
+D:\Mobilno-peklo\stili\stili\obj\x86\Debug\Coffe.g.i.cs
+D:\Mobilno-peklo\stili\stili\obj\x86\Debug\Coffe.g.cs
+D:\Mobilno-peklo\stili\stili\obj\x86\Debug\Coffe.xaml
+D:\Mobilno-peklo\stili\stili\obj\x86\Debug\Coffe.xbf

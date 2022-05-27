@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="stili.Donut"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:stili"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Style TargetType="TextBlock" x:Key="Tekst">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Margin" Value="50,0,0,0"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="Slider" x:Key="Slide">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="0,0,0,0"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Width" Value="300"/>
+        </Style>
+    </Page.Resources>
+    <Grid Background="red">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="340"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image Source="/Assets/white-logo.png" HorizontalAlignment="Left"/>
+        <TextBlock Text="Original Glazed Count:" Grid.Row="1" Style="{StaticResource Tekst}"/>
+        <Slider Grid.Row="1" Grid.Column="1" Style="{StaticResource Slide}"/>
+        <TextBlock Text="Speedway Special Count:" Grid.Row="2" Style="{StaticResource Tekst}"/>
+        <Slider Grid.Row="2" Grid.Column="1" Style="{StaticResource Slide}"/>
+    </Grid>
+</Page>

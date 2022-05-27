@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\Mobilno-peklo\stili\stili\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-24T07:20:02.841</Modified>
+      <Modified>2022-05-27T07:45:30.023</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Mobilno-peklo\stili\stili\bin\x86\Debug\stili.exe">
       <PackagePath>entrypoint\stili.exe</PackagePath>
-      <Modified>2022-05-24T07:20:01.065</Modified>
+      <Modified>2022-05-27T07:45:29.575</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -134,19 +134,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mobilno-peklo\stili\stili\bin\x86\Debug\stili.xr.xml">
       <PackagePath>stili.xr.xml</PackagePath>
-      <Modified>2022-05-24T07:20:00.927</Modified>
+      <Modified>2022-05-27T07:31:03.335</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mobilno-peklo\stili\stili\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-05-24T07:20:00.952</Modified>
+      <Modified>2022-05-27T07:45:29.509</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Mobilno-peklo\stili\stili\bin\x86\Debug\Coffe.xbf">
+      <PackagePath>Coffe.xbf</PackagePath>
+      <Modified>2022-05-27T07:45:29.509</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mobilno-peklo\stili\stili\bin\x86\Debug\Dictionary1.xbf">
       <PackagePath>Dictionary1.xbf</PackagePath>
-      <Modified>2022-05-24T07:20:00.952</Modified>
+      <Modified>2022-05-27T07:45:29.509</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Mobilno-peklo\stili\stili\bin\x86\Debug\Donut.xbf">
+      <PackagePath>Donut.xbf</PackagePath>
+      <Modified>2022-05-27T07:45:29.509</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mobilno-peklo\stili\stili\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-05-24T07:20:00.952</Modified>
+      <Modified>2022-05-27T07:45:29.510</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -154,11 +162,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mobilno-peklo\stili\stili\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-05-24T07:20:01.450</Modified>
+      <Modified>2022-05-27T07:01:53.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mobilno-peklo\stili\stili\bin\x86\Debug\Core\stili.exe">
       <PackagePath>stili.exe</PackagePath>
-      <Modified>2022-05-24T07:20:02.817</Modified>
+      <Modified>2022-05-27T07:45:30.020</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

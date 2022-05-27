@@ -25,6 +25,17 @@ namespace stili
         public MainPage()
         {
             this.InitializeComponent();
+            mojF.Navigate(typeof(Donut));
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            mojF.Navigate(typeof(Donut));
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            mojF.Navigate(typeof(Coffe));
         }
     }
 }

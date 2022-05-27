@@ -106,8 +106,14 @@
     <AppxPackagedFile Include="D:\Mobilno-peklo\stili\stili\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Mobilno-peklo\stili\stili\bin\x86\Debug\Coffe.xbf">
+      <PackagePath>Coffe.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mobilno-peklo\stili\stili\bin\x86\Debug\Dictionary1.xbf">
       <PackagePath>Dictionary1.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Mobilno-peklo\stili\stili\bin\x86\Debug\Donut.xbf">
+      <PackagePath>Donut.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mobilno-peklo\stili\stili\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>

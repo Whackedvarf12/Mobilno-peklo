@@ -8,11 +8,18 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Page.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Dictionary1.xaml"/>
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
+        <Style TargetType="Button" x:Key="stilGumba">
+            <Setter Property="Background" Value="black"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="BorderBrush" Value="gray"/>
+            <Setter Property="BorderThickness" Value="0,0,2,0"/>
+        </Style>
+        <Style TargetType="Image" x:Key="Ikona">
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Width" Value="20"/>
+            <Setter Property="Margin" Value="0, 0, 10, 0"/>
+        </Style>
     </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -26,6 +33,30 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
+            <Button x:ConnectionId='3' Grid.Row="0" Style="{StaticResource stilGumba}"                     >
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Assets/donut-icon.png" Style="{StaticResource Ikona}"/>
+                    <TextBlock Text="Krofi" Foreground="White"/>
+                </StackPanel>
+            </Button>
+            <Button x:ConnectionId='4' Grid.Row="0" Grid.Column="1" Style="{StaticResource stilGumba}"                       >
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Assets/coffee-icon.png" Style="{StaticResource Ikona}"/>
+                    <TextBlock Text="Krofi" Foreground="White"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Row="0" Grid.Column="2" Style="{StaticResource stilGumba}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Assets/schedule-icon.png" Style="{StaticResource Ikona}"/>
+                    <TextBlock Text="Krofi" Foreground="White"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Row="0" Grid.Column="3" Style="{StaticResource stilGumba}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Assets/schedule-icon.png" Style="{StaticResource Ikona}"/>
+                    <TextBlock Text="Krofi" Foreground="White"/>
+                </StackPanel>
+            </Button>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -33,7 +64,7 @@
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
             <Frame x:ConnectionId='2' Name="mojF"/>
-            <Image Grid.Column="1" Source="/Assets/background.jpg"/>
+            <Image Grid.Column="1" Grid.Row="1" Source="/Assets/background.jpg" Stretch="UniformToFill"/>
         </Grid>
     </Grid>
 </Page>
