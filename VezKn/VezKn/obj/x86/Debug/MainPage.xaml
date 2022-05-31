@@ -1,0 +1,31 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="VezKn.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VezKn"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <DataTemplate                         x:Key="predlog">
+            <StackPanel x:ConnectionId='3' Orientation="Horizontal" HorizontalAlignment="Left">
+                <Image x:ConnectionId='4' Name="image"                              HorizontalAlignment="Center" Width="150"/>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock x:ConnectionId='5'                       FontSize="18"/>
+                    <TextBlock x:ConnectionId='6'                        FontSize="16"/>
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:ConnectionId='7' Grid.Row="1" Name="tbrez" Foreground="red" Margin="20,20,0,0" Text="st: "/>
+        <ListView x:ConnectionId='8'                              IsItemClickEnabled="True"                                ItemTemplate="{StaticResource predlog}">
+        </ListView>
+    </Grid>
+</Page>
+

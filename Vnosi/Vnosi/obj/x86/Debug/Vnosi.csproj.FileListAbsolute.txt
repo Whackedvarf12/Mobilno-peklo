@@ -1,0 +1,9 @@
+D:\Mobilno-peklo\Vnosi\Vnosi\obj\x86\Debug\Vnosi.csproj.AssemblyReference.cache
+D:\Mobilno-peklo\Vnosi\Vnosi\obj\x86\Debug\App.g.i.cs
+D:\Mobilno-peklo\Vnosi\Vnosi\obj\x86\Debug\App.g.cs
+D:\Mobilno-peklo\Vnosi\Vnosi\obj\x86\Debug\MainPage.g.i.cs
+D:\Mobilno-peklo\Vnosi\Vnosi\obj\x86\Debug\MainPage.g.cs
+D:\Mobilno-peklo\Vnosi\Vnosi\obj\x86\Debug\App.xaml
+D:\Mobilno-peklo\Vnosi\Vnosi\obj\x86\Debug\MainPage.xaml
+D:\Mobilno-peklo\Vnosi\Vnosi\obj\x86\Debug\App.xbf
+D:\Mobilno-peklo\Vnosi\Vnosi\obj\x86\Debug\MainPage.xbf
