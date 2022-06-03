@@ -13,18 +13,32 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" Margin="20">
-            <TextBlock Text="Ime" HorizontalAlignment="Left"/>
-            <TextBlock x:Name="txtIme" Margin=" 10,0,0,0" Width="400"/>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="20">
-            <TextBlock Text="Ime" HorizontalAlignment="Left"/>
-            <TextBlock x:Name="txtIme" Margin=" 10,0,0,0" Width="400"/>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="20">
-            <TextBlock Text="Priimek" HorizontalAlignment="Left"/>
-            
-        </StackPanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+            <TextBlock Text="Ime" HorizontalAlignment="Left" Grid.Column="0"/>
+        <TextBox Name="txtIme" Margin=" 10,0,0,0" Width="400" Grid.Column="1"/>
+
+
+        <TextBlock Text="Priimek" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="1"/>
+        <TextBox Name="txtPriimek" Margin=" 10,0,0,0" Width="400" Grid.Column="1" Grid.Row="1"/>
+
+        <Button Grid.Row="2" Content="dodaj" Click="Button_Click"/>
+        <GridView Grid.Row="3" Grid.ColumnSpan="2" ItemsSource="{x:Bind Stiki}">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="local:Kontakt">
+                    <StackPanel HorizontalAlignment="Center" Margin="20">
+                        <StackPanel Orientation="Horizontal" Margin="0, 10, 0, 0">
+                            <TextBlock Text="{x:Bind Ime}" Margin="0, 0, 5, 0"></TextBlock>
+                            <TextBlock Text="{x:Bind Priimek}" Margin="0, 0, 5, 0"></TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
     </Grid>
 </Page>

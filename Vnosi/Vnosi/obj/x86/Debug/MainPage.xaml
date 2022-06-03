@@ -1,0 +1,45 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="Vnosi.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Vnosi"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+            <TextBlock Text="Ime" HorizontalAlignment="Left" Grid.Column="0"/>
+        <TextBox x:ConnectionId='2' Name="txtIme" Margin=" 10,0,0,0" Width="400" Grid.Column="1"/>
+
+
+        <TextBlock Text="Priimek" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="1"/>
+        <TextBox x:ConnectionId='3' Name="txtPriimek" Margin=" 10,0,0,0" Width="400" Grid.Column="1" Grid.Row="1"/>
+
+        <Button x:ConnectionId='4' Grid.Row="2" Content="dodaj"                     />
+        <GridView x:ConnectionId='5' Grid.Row="3" Grid.ColumnSpan="2"                             >
+            <GridView.ItemTemplate>
+                <DataTemplate                           >
+                    <StackPanel x:ConnectionId='7' HorizontalAlignment="Center" Margin="20">
+                        <StackPanel Orientation="Horizontal" Margin="0, 10, 0, 0">
+                            <TextBlock x:ConnectionId='8'                     Margin="0, 0, 5, 0"></TextBlock>
+                            <TextBlock x:ConnectionId='9'                         Margin="0, 0, 5, 0"></TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+    </Grid>
+</Page>
+

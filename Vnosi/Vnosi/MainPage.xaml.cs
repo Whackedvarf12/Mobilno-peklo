@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -23,6 +24,7 @@ namespace Vnosi
     public sealed partial class MainPage : Page
     {
         List<Icon> Ikone;
+        ObservableCollection<Kontakt> Stiki=new ObservableCollection<Kontakt>();
         public MainPage()
         {
             this.InitializeComponent();
@@ -30,6 +32,14 @@ namespace Vnosi
             Ikone.Add(new Icon { Ikona = "Assets/male-01.png" });
             Ikone.Add(new Icon { Ikona = "Assets/male-02.png" });
             Ikone.Add(new Icon { Ikona = "Assets/male-03.png" });
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Kontakt x = new Kontakt();
+            x.Ime = txtIme.Text;
+            x.Priimek = txtPriimek.Text;
+            Stiki.Add(x);
         }
     }
 }
