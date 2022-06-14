@@ -1,0 +1,32 @@
+﻿@model SemAPI2.Models.Področja
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Odstrani</h2>
+
+<h3>Želite odstraniti?</h3>
+<div>
+    <h4>Predmet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @*@Html.DisplayNameFor(model => model.PodIme)*@Predmet
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PodIme)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Odstrani" class="btn btn-default" /> |
+            @Html.ActionLink("Nazaj", "Index")
+        </div>
+    }
+</div>

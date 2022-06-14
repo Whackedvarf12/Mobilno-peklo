@@ -9,6 +9,8 @@
 
 namespace SemAPI.Models
 {
+    
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -19,22 +21,32 @@ namespace SemAPI.Models
         {
             this.DijakPodročje = new HashSet<DijakPodročje>();
         }
-    
+
         public int DijID { get; set; }
         public string DijIme { get; set; }
         public string DijPriimek { get; set; }
+        [JsonIgnore]
         public string DijRazred { get; set; }
+        [JsonIgnore]
         public Nullable<System.DateTime> DijDatumRojstva { get; set; }
+        [JsonIgnore]
         public byte[] DijaSlika { get; set; }
+        [JsonIgnore]
         public Nullable<System.DateTime> DijIDNadDatum { get; set; }
+        [JsonIgnore]
         public string DijIDNadUstanova { get; set; }
+        [JsonIgnore]
         public Nullable<System.DateTime> DijIDNadPotrditev { get; set; }
+        [JsonIgnore]
         public string DijMati { get; set; }
+        [JsonIgnore]
         public string DijOče { get; set; }
+        [JsonIgnore]
         public Nullable<System.Guid> UserID { get; set; }
-    
+        [JsonIgnore]
         public virtual Razredniki Razredniki { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<DijakPodročje> DijakPodročje { get; set; }
     }
 }

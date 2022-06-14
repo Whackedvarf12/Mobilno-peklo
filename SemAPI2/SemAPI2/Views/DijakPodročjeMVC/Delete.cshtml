@@ -1,0 +1,48 @@
+﻿@model SemAPI2.Models.DijakPodročje
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Odstrani</h2>
+
+<h3>Želite ostraniti</h3>
+<div>
+    <h4>Dijak-Predmet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        @*<dt>
+            @Html.DisplayNameFor(model => model.DijPodTest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DijPodTest)
+        </dd>*@
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.Dijak.DijIme)*@Dijak
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dijak.DijIme)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.Področja.PodIme)*@Predmet
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Področja.PodIme)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Odstrani" class="btn btn-default" /> |
+            @Html.ActionLink("Nazaj", "Index")
+        </div>
+    }
+</div>

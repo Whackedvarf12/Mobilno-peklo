@@ -1,0 +1,106 @@
+﻿@model SemAPI2.Models.Dijak
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Podrobnosti</h2>
+
+<div>
+    <h4>Dijak</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @*@Html.DisplayNameFor(model => model.DijIme)*@Ime
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DijIme)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.DijPriimek)*@Priimek
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DijPriimek)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.DijDatumRojstva)*@Rojstvo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DijDatumRojstva)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.DijaSlika)*@Slika
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DijaSlika)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.DijIDNadDatum)*@Neki datum
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DijIDNadDatum)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.DijIDNadUstanova)*@Datum ustanove
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DijIDNadUstanova)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.DijIDNadPotrditev)*@Datum potrditve
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DijIDNadPotrditev)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.DijMati)*@Mama
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DijMati)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.DijOče)*@Tata
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DijOče)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.UserID)*@ID uporabnika
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserID)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.Razredniki.RazImePriimek)*@Razrednik
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Razredniki.RazImePriimek)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Spremeni", "Edit", new { id = Model.DijID }) |
+    @Html.ActionLink("Nazaj", "Index")
+</p>

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<SemAPI2.Models.Področja>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Predmeti</h2>
+
+<p>
+    @Html.ActionLink("Ustvari", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @*@Html.DisplayNameFor(model => model.PodIme)*@Predmet
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PodIme)
+        </td>
+        <td>
+            @Html.ActionLink("Spremeni", "Edit", new { id=item.PodID }) |
+            @Html.ActionLink("Podrobnosti", "Details", new { id=item.PodID }) |
+            @Html.ActionLink("Odstrani", "Delete", new { id=item.PodID })
+        </td>
+    </tr>
+}
+
+</table>

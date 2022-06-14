@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Dijak">
+          <Key>
+            <PropertyRef Name="DijID" />
+          </Key>
+          <Property Name="DijID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DijIme" Type="nvarchar" MaxLength="50" />
+          <Property Name="DijPriimek" Type="nvarchar" MaxLength="50" />
+          <Property Name="DijRazred" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="DijDatumRojstva" Type="date" />
+          <Property Name="DijaSlika" Type="image" />
+          <Property Name="DijIDNadDatum" Type="date" />
+          <Property Name="DijIDNadUstanova" Type="nvarchar" MaxLength="50" />
+          <Property Name="DijIDNadPotrditev" Type="date" />
+          <Property Name="DijMati" Type="nvarchar" MaxLength="50" />
+          <Property Name="DijOče" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserID" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="DijakPodročje">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="DijID" Type="int" Nullable="false" />
+          <Property Name="PodID" Type="int" Nullable="false" />
+          <Property Name="DijPodTest" Type="nvarchar(max)" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Področja">
+          <Key>
+            <PropertyRef Name="PodID" />
+          </Key>
+          <Property Name="PodID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PodIme" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Razredniki">
+          <Key>
+            <PropertyRef Name="RazRazred" />
+          </Key>
+          <Property Name="RazRazred" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="RazImePriimek" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Dijak_Razrednik">
+          <End Role="Razredniki" Type="Self.Razredniki" Multiplicity="1" />
+          <End Role="Dijak" Type="Self.Dijak" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Razredniki">
+              <PropertyRef Name="RazRazred" />
+            </Principal>
+            <Dependent Role="Dijak">
+              <PropertyRef Name="DijRazred" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DijakPodročje_Dijak">
+          <End Role="Dijak" Type="Self.Dijak" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DijakPodročje" Type="Self.DijakPodročje" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dijak">
+              <PropertyRef Name="DijID" />
+            </Principal>
+            <Dependent Role="DijakPodročje">
+              <PropertyRef Name="DijID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DijakPodročje_Področja">
+          <End Role="Področja" Type="Self.Področja" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DijakPodročje" Type="Self.DijakPodročje" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Področja">
+              <PropertyRef Name="PodID" />
+            </Principal>
+            <Dependent Role="DijakPodročje">
+              <PropertyRef Name="PodID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="Dijak" EntityType="Self.Dijak" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DijakPodročje" EntityType="Self.DijakPodročje" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Področja" EntityType="Self.Področja" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Razredniki" EntityType="Self.Razredniki" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Dijak_Razrednik" Association="Self.FK_Dijak_Razrednik">
+            <End Role="Razredniki" EntitySet="Razredniki" />
+            <End Role="Dijak" EntitySet="Dijak" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DijakPodročje_Dijak" Association="Self.FK_DijakPodročje_Dijak">
+            <End Role="Dijak" EntitySet="Dijak" />
+            <End Role="DijakPodročje" EntitySet="DijakPodročje" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DijakPodročje_Področja" Association="Self.FK_DijakPodročje_Področja">
+            <End Role="Področja" EntitySet="Področja" />
+            <End Role="DijakPodročje" EntitySet="DijakPodročje" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Dijak">
+          <Key>
+            <PropertyRef Name="DijID" />
+          </Key>
+          <Property Name="DijID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DijIme" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DijPriimek" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DijRazred" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="DijDatumRojstva" Type="DateTime" Precision="0" />
+          <Property Name="DijaSlika" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="DijIDNadDatum" Type="DateTime" Precision="0" />
+          <Property Name="DijIDNadUstanova" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DijIDNadPotrditev" Type="DateTime" Precision="0" />
+          <Property Name="DijMati" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DijOče" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserID" Type="Guid" />
+          <NavigationProperty Name="Razredniki" Relationship="Self.FK_Dijak_Razrednik" FromRole="Dijak" ToRole="Razredniki" />
+          <NavigationProperty Name="DijakPodročje" Relationship="Self.FK_DijakPodročje_Dijak" FromRole="Dijak" ToRole="DijakPodročje" />
+        </EntityType>
+        <EntityType Name="DijakPodročje">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="DijID" Type="Int32" Nullable="false" />
+          <Property Name="PodID" Type="Int32" Nullable="false" />
+          <Property Name="DijPodTest" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Dijak" Relationship="Self.FK_DijakPodročje_Dijak" FromRole="DijakPodročje" ToRole="Dijak" />
+          <NavigationProperty Name="Področja" Relationship="Self.FK_DijakPodročje_Področja" FromRole="DijakPodročje" ToRole="Področja" />
+        </EntityType>
+        <EntityType Name="Področja">
+          <Key>
+            <PropertyRef Name="PodID" />
+          </Key>
+          <Property Name="PodID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PodIme" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DijakPodročje" Relationship="Self.FK_DijakPodročje_Področja" FromRole="Področja" ToRole="DijakPodročje" />
+        </EntityType>
+        <EntityType Name="Razredniki">
+          <Key>
+            <PropertyRef Name="RazRazred" />
+          </Key>
+          <Property Name="RazRazred" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="RazImePriimek" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Dijak" Relationship="Self.FK_Dijak_Razrednik" FromRole="Razredniki" ToRole="Dijak" />
+        </EntityType>
+        <Association Name="FK_Dijak_Razrednik">
+          <End Role="Razredniki" Type="Self.Razredniki" Multiplicity="1" />
+          <End Role="Dijak" Type="Self.Dijak" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Razredniki">
+              <PropertyRef Name="RazRazred" />
+            </Principal>
+            <Dependent Role="Dijak">
+              <PropertyRef Name="DijRazred" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DijakPodročje_Dijak">
+          <End Role="Dijak" Type="Self.Dijak" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DijakPodročje" Type="Self.DijakPodročje" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dijak">
+              <PropertyRef Name="DijID" />
+            </Principal>
+            <Dependent Role="DijakPodročje">
+              <PropertyRef Name="DijID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DijakPodročje_Področja">
+          <End Role="Področja" Type="Self.Področja" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DijakPodročje" Type="Self.DijakPodročje" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Področja">
+              <PropertyRef Name="PodID" />
+            </Principal>
+            <Dependent Role="DijakPodročje">
+              <PropertyRef Name="PodID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Dijak" EntityType="Self.Dijak" />
+          <EntitySet Name="DijakPodročje" EntityType="Self.DijakPodročje" />
+          <EntitySet Name="Področja" EntityType="Self.Področja" />
+          <EntitySet Name="Razredniki" EntityType="Self.Razredniki" />
+          <AssociationSet Name="FK_Dijak_Razrednik" Association="Self.FK_Dijak_Razrednik">
+            <End Role="Razredniki" EntitySet="Razredniki" />
+            <End Role="Dijak" EntitySet="Dijak" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DijakPodročje_Dijak" Association="Self.FK_DijakPodročje_Dijak">
+            <End Role="Dijak" EntitySet="Dijak" />
+            <End Role="DijakPodročje" EntitySet="DijakPodročje" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DijakPodročje_Področja" Association="Self.FK_DijakPodročje_Področja">
+            <End Role="Področja" EntitySet="Področja" />
+            <End Role="DijakPodročje" EntitySet="DijakPodročje" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="Dijak">
+            <EntityTypeMapping TypeName="Model.Dijak">
+              <MappingFragment StoreEntitySet="Dijak">
+                <ScalarProperty Name="DijID" ColumnName="DijID" />
+                <ScalarProperty Name="DijIme" ColumnName="DijIme" />
+                <ScalarProperty Name="DijPriimek" ColumnName="DijPriimek" />
+                <ScalarProperty Name="DijRazred" ColumnName="DijRazred" />
+                <ScalarProperty Name="DijDatumRojstva" ColumnName="DijDatumRojstva" />
+                <ScalarProperty Name="DijaSlika" ColumnName="DijaSlika" />
+                <ScalarProperty Name="DijIDNadDatum" ColumnName="DijIDNadDatum" />
+                <ScalarProperty Name="DijIDNadUstanova" ColumnName="DijIDNadUstanova" />
+                <ScalarProperty Name="DijIDNadPotrditev" ColumnName="DijIDNadPotrditev" />
+                <ScalarProperty Name="DijMati" ColumnName="DijMati" />
+                <ScalarProperty Name="DijOče" ColumnName="DijOče" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DijakPodročje">
+            <EntityTypeMapping TypeName="Model.DijakPodročje">
+              <MappingFragment StoreEntitySet="DijakPodročje">
+                <ScalarProperty Name="DijID" ColumnName="DijID" />
+                <ScalarProperty Name="PodID" ColumnName="PodID" />
+                <ScalarProperty Name="DijPodTest" ColumnName="DijPodTest" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Področja">
+            <EntityTypeMapping TypeName="Model.Področja">
+              <MappingFragment StoreEntitySet="Področja">
+                <ScalarProperty Name="PodID" ColumnName="PodID" />
+                <ScalarProperty Name="PodIme" ColumnName="PodIme" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Razredniki">
+            <EntityTypeMapping TypeName="Model.Razredniki">
+              <MappingFragment StoreEntitySet="Razredniki">
+                <ScalarProperty Name="RazRazred" ColumnName="RazRazred" />
+                <ScalarProperty Name="RazImePriimek" ColumnName="RazImePriimek" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
